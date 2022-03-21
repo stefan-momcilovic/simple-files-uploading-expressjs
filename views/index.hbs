@@ -1,0 +1,21 @@
+{{#if success}}
+    <p style="color:#008000">{{ message }}</p>
+{{/if}}
+
+{{#if error}}
+    <p style="color:#ff0000">{{ message }}</p>
+{{/if}}
+
+<h1>For Single Files</h1>
+<form action="/single" method="post" enctype="multipart/form-data">
+    <label for="Single file upload">Single file upload</label>
+    <input type="file" name="image">
+    <input type="submit" value="Upload Single">
+</form>
+
+<h2>For Multiple Files</h2>
+<form action="/multiple" method="post" enctype="multipart/form-data">
+    <label for="Multi file upload">Multi file upload</label>
+    <input type="file" name="images" multiple>
+    <input type="submit" value="Upload Multi">
+</form>
